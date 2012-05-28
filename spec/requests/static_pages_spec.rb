@@ -7,10 +7,16 @@ describe "Static Pages" do
       page.should have_content('Sample App')
     end
 
-    it "should have title 'Home'" do
+    it "should have base title 'Sample App'" do
       visit '/static_pages/home'
       page.should have_selector('title',
-                        :text=> "Home")        
+                        :text=> "Sample App")        
+    end
+
+    it "should not have custom page title 'Home'" do
+      visit '/static_pages/home'
+      page.should_not have_selector('title',
+                            :text=> "Home")
     end
   end
   
