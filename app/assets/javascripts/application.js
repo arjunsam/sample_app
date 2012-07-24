@@ -23,5 +23,5 @@ $(function() {3
 
 function updateFeed () { 
 	$.getScript("/home.js")
-	setTimeout(updateFeed, 10000);
+	setTimeout(updateFeed, 1000);
 };
