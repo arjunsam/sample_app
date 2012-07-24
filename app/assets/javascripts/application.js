@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(function() {3
+	if ($("#feed").length > 0) {
+	 setTimeout(updateFeed, 1000);
+	}
+});
+
+function updateFeed () { 
+	$.getScript("/home.js")
+	setTimeout(updateFeed, 10000);
+};
