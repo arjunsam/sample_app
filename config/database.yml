@@ -7,7 +7,8 @@ development:
   adapter: postgresql 
   database: sample_app_dev
   encoding: unicode 
-  username: dsampath
+  pool: 5
+  username: arjun 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
